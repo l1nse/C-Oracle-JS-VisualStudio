@@ -1,0 +1,246 @@
+﻿body
+{
+    
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #bef781;
+    font-family: 'Noto Serif', serif;
+    
+}
+
+    .login
+    {
+        max-width: 400px;
+        padding: 15px;
+        margin: 0 auto;
+    }
+    
+    .login .login-heading
+    {
+        margin-bottom: 10px;
+    }
+    
+    .login .form-control
+    {
+        position: relative;
+        height: auto;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 10px;
+        font-size: 16px;
+    }
+    
+    .txtLabel
+    {
+        font-size: 25px;
+    }
+
+    .txtLabelRegistro
+    {
+        font-size: 19px;
+    }
+
+
+         
+    .login input[type="SingleLine"]
+    {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    
+    .login input[type="password"]
+    {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .vistaTablas
+    {
+        max-width: 1200px;
+        padding: 15px;
+        margin: 0 auto;
+    }
+    
+    .vistaTablas .tablas-heading
+    {
+        margin-bottom: 10px;
+    }
+    
+    .vistaTablas .form-control
+    {
+        position: relative;
+       
+        height: auto;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 10px;
+        font-size: 16px;
+    }
+    
+   
+         
+    .vistaTablas input[type="SingleLine"]
+    {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    
+    .vistaTablas input[type="password"]
+    {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .panelUsuario
+    {
+        max-width: 1500px;
+        padding: 15px;
+        margin: 0 auto;
+    }
+    
+    .panelUsuario .form-control
+    {
+        position: relative;
+       
+        height: auto;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .registrar
+    {
+        max-width: 800px;
+        padding: 15px;
+        margin: 0 auto;
+    }
+    
+    .registrar .form-control
+    {
+        position: relative;
+       
+        height: auto;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+.button1 {
+    background-image: url(../imagenes/user.png);
+    background-repeat:no-repeat;
+}
+
+.button2 {
+    background-image: url(../imagenes/people.png);
+    background-repeat:no-repeat;
+}
+
+.button3 {
+    background-image: url(../imagenes/lemon.png);
+    background-repeat:no-repeat;
+}
+
+.button4 {
+    background-image: url(../imagenes/shopping-cart.png);
+    background-repeat:no-repeat;
+}
+
+.button5 {
+    background-image: url(../imagenes/clock.png);
+    background-repeat:no-repeat;
+}
+
+.button6 {
+    background-image: url(../imagenes/cancel.png);
+    background-repeat:no-repeat;
+}
+
+.button7{
+    background-image: url(../imagenes/mapa.png);
+    background-repeat:no-repeat;
+}
+
+.button8{
+    background-image: url(../imagenes/upload-button.png);
+    background-repeat:no-repeat;
+}
+
+.button9{
+    background-image: url(../imagenes/delete-button.png);
+    background-repeat:no-repeat;
+}
+
+.button10{
+    background-image: url(../imagenes/home.png);
+    background-repeat:no-repeat;
+}
+
+.button11{
+    background-image: url(../imagenes/edit.png);
+    background-repeat:no-repeat;
+}
+
+.button12{
+    background-image: url(../imagenes/list-with-dots.png);
+    background-repeat:no-repeat;
+}
+
+.txtBusqueda {
+    
+        
+        width: 100%;
+}
+
+.chkLabel {
+
+    font-size: 25px;
+
+}
+
+@media (max-width: 768px) {
+
+     .login
+    {
+        max-width: 350px;
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+     .vistaTablas
+    {
+        max-width: 350px;
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+          
+
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+    .vistaTablas
+    {
+        max-width: 768px;
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+    
+}
+
+@media (min-width: 1200px) {
+    .btnRegistro {
+        width: 500px;
+    }
+}

@@ -1,0 +1,623 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5CF60F1-F0DE-4F29-BBCD-098E00D68556}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PORTAFOLIO_WEB</RootNamespace>
+    <AssemblyName>PORTAFOLIO_WEB</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Devart.Data, Version=5.0.1555.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.Linq, Version=4.5.1100.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.Oracle, Version=9.1.131.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.Oracle.Linq, Version=4.5.1100.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Google.Maps">
+      <HintPath>..\Libreria\Google.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="vistas\content\css\bootstrap-theme.css.map" />
+    <Content Include="vistas\content\css\bootstrap-theme.min.css.map" />
+    <Content Include="vistas\content\css\bootstrap.css.map" />
+    <Content Include="vistas\content\css\bootstrap.min.css.map" />
+    <Content Include="vistas\content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="vistas\content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="vistas\content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="vistas\content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="model\DataContextPORTAFOLIO.Diagram1.view">
+      <DependentUpon>DataContextPORTAFOLIO.lqml</DependentUpon>
+    </Content>
+    <Content Include="model\DataContextPORTAFOLIO.edps">
+      <DependentUpon>DataContextPORTAFOLIO.lqml</DependentUpon>
+    </Content>
+    <Content Include="model\DataContextPORTAFOLIO.lqml">
+      <Generator>DevartLinqToSqlGenerator</Generator>
+      <LastGenOutput>DataContextPORTAFOLIO.Designer.cs</LastGenOutput>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="vistas\content\css\bootstrap-theme.css" />
+    <Content Include="vistas\content\css\bootstrap-theme.min.css" />
+    <Content Include="vistas\content\css\bootstrap.css" />
+    <Content Include="vistas\content\css\bootstrap.min.css" />
+    <Content Include="vistas\content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="vistas\content\js\bootstrap.js" />
+    <Content Include="vistas\content\js\bootstrap.min.js" />
+    <Content Include="vistas\content\js\npm.js" />
+    <Content Include="vistas\CSS\bootstrap.min.css" />
+    <Content Include="vistas\CSS\dataTables.bootstrap.min.css" />
+    <Content Include="vistas\CSS\responsive.bootstrap.min.css" />
+    <Content Include="vistas\CSS\Style.css" />
+    <Content Include="vistas\detalleBoletaAdmin.aspx" />
+    <Content Include="vistas\imagenes\cancel.png" />
+    <Content Include="vistas\imagenes\clock.png" />
+    <Content Include="vistas\imagenes\delete-button.png" />
+    <Content Include="vistas\imagenes\edit.png" />
+    <Content Include="vistas\imagenes\home.png" />
+    <Content Include="vistas\imagenes\lemon.png" />
+    <Content Include="vistas\imagenes\list-with-dots.png" />
+    <Content Include="vistas\imagenes\mapa.png" />
+    <Content Include="vistas\imagenes\people.png" />
+    <Content Include="vistas\imagenes\shopping-cart.png" />
+    <Content Include="vistas\imagenes\upload-button.png" />
+    <Content Include="vistas\imagenes\user.png" />
+    <Content Include="vistas\js\dataTables.bootstrap.min.js" />
+    <Content Include="vistas\js\dataTables.responsive.min.js" />
+    <Content Include="vistas\js\jquery-1.12.3.js" />
+    <Content Include="vistas\js\jquery-3.1.1.min.js" />
+    <Content Include="vistas\js\jquery.dataTables.min.js" />
+    <Content Include="vistas\js\jquery.responsivetable.min.js" />
+    <Content Include="vistas\js\responsive.bootstrap.min.js" />
+    <Content Include="vistas\js\validarDatos.js" />
+    <Content Include="vistas\agregarAlCarrito.aspx" />
+    <Content Include="vistas\agregarAMisProductos.aspx" />
+    <Content Include="vistas\agregarProductoAdmin.aspx" />
+    <Content Include="vistas\cambiarContrasenia.aspx" />
+    <Content Include="vistas\cambiarContraseniaProductor.aspx" />
+    <Content Include="vistas\cambiarCuentaAVendedor.aspx" />
+    <Content Include="vistas\cancelarCierreCuenta.aspx" />
+    <Content Include="vistas\cancelarCierreCuentaProductor.aspx" />
+    <Content Include="vistas\carritoCompra.aspx" />
+    <Content Include="vistas\cerrarCuenta.aspx" />
+    <Content Include="vistas\cerrarCuentaProductor.aspx" />
+    <Content Include="vistas\confirmarCierreCuenta.aspx" />
+    <Content Include="vistas\confirmarCierreCuentaProductor.aspx" />
+    <Content Include="vistas\detalleBoleta.aspx" />
+    <Content Include="vistas\detalleVentas.aspx" />
+    <Content Include="vistas\editarCuenta.aspx" />
+    <Content Include="vistas\editarCuentaProductor.aspx" />
+    <Content Include="vistas\editarProductoAdmin.aspx" />
+    <Content Include="vistas\ERROR.aspx" />
+    <Content Include="vistas\fotoPerfil.aspx" />
+    <Content Include="vistas\fotoPerfilProductor.aspx" />
+    <Content Include="vistas\historialCompras.aspx" />
+    <Content Include="vistas\historialVentas.aspx" />
+    <Content Include="vistas\informacionProductor.aspx" />
+    <Content Include="vistas\informacionProductorProductos.aspx" />
+    <Content Include="vistas\login.aspx" />
+    <Content Include="vistas\Mapa\mapa.aspx" />
+    <Content Include="vistas\Mapa\mapa2.aspx" />
+    <Content Include="vistas\Mapa\mapa3.aspx" />
+    <Content Include="vistas\misProductos.aspx" />
+    <Content Include="vistas\modificarProductor.aspx" />
+    <Content Include="vistas\modificarUsuario.aspx" />
+    <Content Include="vistas\panelAdministrador.aspx" />
+    <Content Include="vistas\panelProductor.aspx" />
+    <Content Include="vistas\panelUsuario.aspx" />
+    <Content Include="vistas\productorPorProducto.aspx" />
+    <Content Include="vistas\registar.aspx" />
+    <Content Include="vistas\restarProducto.aspx" />
+    <Content Include="vistas\restarProductoProductor.aspx" />
+    <Content Include="vistas\sumarProductos.aspx" />
+    <Content Include="vistas\sumarProductosProductor.aspx" />
+    <Content Include="vistas\upGraderAdmin.aspx" />
+    <Content Include="vistas\verProductores.aspx" />
+    <Content Include="vistas\verProductoresAdmin.aspx" />
+    <Content Include="vistas\verProductos.aspx" />
+    <Content Include="vistas\verProductosProdAdmin.aspx" />
+    <Content Include="vistas\verProductosProductor.aspx" />
+    <Content Include="vistas\verUsuarioAdmin.aspx" />
+    <Content Include="vistas\verVentas.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="model\DataContextPORTAFOLIO.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataContextPORTAFOLIO.lqml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="vistas\agregarAlCarrito.aspx.cs">
+      <DependentUpon>agregarAlCarrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\agregarAlCarrito.aspx.designer.cs">
+      <DependentUpon>agregarAlCarrito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\agregarAMisProductos.aspx.cs">
+      <DependentUpon>agregarAMisProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\agregarAMisProductos.aspx.designer.cs">
+      <DependentUpon>agregarAMisProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\agregarProductoAdmin.aspx.cs">
+      <DependentUpon>agregarProductoAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\agregarProductoAdmin.aspx.designer.cs">
+      <DependentUpon>agregarProductoAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\cambiarContrasenia.aspx.cs">
+      <DependentUpon>cambiarContrasenia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\cambiarContrasenia.aspx.designer.cs">
+      <DependentUpon>cambiarContrasenia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\cambiarContraseniaProductor.aspx.cs">
+      <DependentUpon>cambiarContraseniaProductor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\cambiarContraseniaProductor.aspx.designer.cs">
+      <DependentUpon>cambiarContraseniaProductor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\cambiarCuentaAVendedor.aspx.cs">
+      <DependentUpon>cambiarCuentaAVendedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\cambiarCuentaAVendedor.aspx.designer.cs">
+      <DependentUpon>cambiarCuentaAVendedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\cancelarCierreCuenta.aspx.cs">
+      <DependentUpon>cancelarCierreCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\cancelarCierreCuenta.aspx.designer.cs">
+      <DependentUpon>cancelarCierreCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\cancelarCierreCuentaProductor.aspx.cs">
+      <DependentUpon>cancelarCierreCuentaProductor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\cancelarCierreCuentaProductor.aspx.designer.cs">
+      <DependentUpon>cancelarCierreCuentaProductor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\carritoCompra.aspx.cs">
+      <DependentUpon>carritoCompra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\carritoCompra.aspx.designer.cs">
+      <DependentUpon>carritoCompra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\cerrarCuenta.aspx.cs">
+      <DependentUpon>cerrarCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\cerrarCuenta.aspx.designer.cs">
+      <DependentUpon>cerrarCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\cerrarCuentaProductor.aspx.cs">
+      <DependentUpon>cerrarCuentaProductor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\cerrarCuentaProductor.aspx.designer.cs">
+      <DependentUpon>cerrarCuentaProductor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\confirmarCierreCuenta.aspx.cs">
+      <DependentUpon>confirmarCierreCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\confirmarCierreCuenta.aspx.designer.cs">
+      <DependentUpon>confirmarCierreCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\confirmarCierreCuentaProductor.aspx.cs">
+      <DependentUpon>confirmarCierreCuentaProductor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\confirmarCierreCuentaProductor.aspx.designer.cs">
+      <DependentUpon>confirmarCierreCuentaProductor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\detalleBoleta.aspx.cs">
+      <DependentUpon>detalleBoleta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\detalleBoleta.aspx.designer.cs">
+      <DependentUpon>detalleBoleta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\detalleBoletaAdmin.aspx.cs">
+      <DependentUpon>detalleBoletaAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\detalleBoletaAdmin.aspx.designer.cs">
+      <DependentUpon>detalleBoletaAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\detalleVentas.aspx.cs">
+      <DependentUpon>detalleVentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\detalleVentas.aspx.designer.cs">
+      <DependentUpon>detalleVentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\editarCuenta.aspx.cs">
+      <DependentUpon>editarCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\editarCuenta.aspx.designer.cs">
+      <DependentUpon>editarCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\editarCuentaProductor.aspx.cs">
+      <DependentUpon>editarCuentaProductor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\editarCuentaProductor.aspx.designer.cs">
+      <DependentUpon>editarCuentaProductor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\editarProductoAdmin.aspx.cs">
+      <DependentUpon>editarProductoAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\editarProductoAdmin.aspx.designer.cs">
+      <DependentUpon>editarProductoAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ERROR.aspx.cs">
+      <DependentUpon>ERROR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\ERROR.aspx.designer.cs">
+      <DependentUpon>ERROR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\fotoPerfil.aspx.cs">
+      <DependentUpon>fotoPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\fotoPerfil.aspx.designer.cs">
+      <DependentUpon>fotoPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\fotoPerfilProductor.aspx.cs">
+      <DependentUpon>fotoPerfilProductor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\fotoPerfilProductor.aspx.designer.cs">
+      <DependentUpon>fotoPerfilProductor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\historialCompras.aspx.cs">
+      <DependentUpon>historialCompras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\historialCompras.aspx.designer.cs">
+      <DependentUpon>historialCompras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\historialVentas.aspx.cs">
+      <DependentUpon>historialVentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\historialVentas.aspx.designer.cs">
+      <DependentUpon>historialVentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\informacionProductor.aspx.cs">
+      <DependentUpon>informacionProductor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\informacionProductor.aspx.designer.cs">
+      <DependentUpon>informacionProductor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\informacionProductorProductos.aspx.cs">
+      <DependentUpon>informacionProductorProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\informacionProductorProductos.aspx.designer.cs">
+      <DependentUpon>informacionProductorProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\Mapa\mapa.aspx.cs">
+      <DependentUpon>mapa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\Mapa\mapa.aspx.designer.cs">
+      <DependentUpon>mapa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\Mapa\mapa2.aspx.cs">
+      <DependentUpon>mapa2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\Mapa\mapa2.aspx.designer.cs">
+      <DependentUpon>mapa2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\Mapa\mapa3.aspx.cs">
+      <DependentUpon>mapa3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\Mapa\mapa3.aspx.designer.cs">
+      <DependentUpon>mapa3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\misProductos.aspx.cs">
+      <DependentUpon>misProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\misProductos.aspx.designer.cs">
+      <DependentUpon>misProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\modificarProductor.aspx.cs">
+      <DependentUpon>modificarProductor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\modificarProductor.aspx.designer.cs">
+      <DependentUpon>modificarProductor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\modificarUsuario.aspx.cs">
+      <DependentUpon>modificarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\modificarUsuario.aspx.designer.cs">
+      <DependentUpon>modificarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\panelAdministrador.aspx.cs">
+      <DependentUpon>panelAdministrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\panelAdministrador.aspx.designer.cs">
+      <DependentUpon>panelAdministrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\panelProductor.aspx.cs">
+      <DependentUpon>panelProductor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\panelProductor.aspx.designer.cs">
+      <DependentUpon>panelProductor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\panelUsuario.aspx.cs">
+      <DependentUpon>panelUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\panelUsuario.aspx.designer.cs">
+      <DependentUpon>panelUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\productorPorProducto.aspx.cs">
+      <DependentUpon>productorPorProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\productorPorProducto.aspx.designer.cs">
+      <DependentUpon>productorPorProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\registar.aspx.cs">
+      <DependentUpon>registar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\registar.aspx.designer.cs">
+      <DependentUpon>registar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\restarProducto.aspx.cs">
+      <DependentUpon>restarProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\restarProducto.aspx.designer.cs">
+      <DependentUpon>restarProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\restarProductoProductor.aspx.cs">
+      <DependentUpon>restarProductoProductor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\restarProductoProductor.aspx.designer.cs">
+      <DependentUpon>restarProductoProductor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\sumarProductos.aspx.cs">
+      <DependentUpon>sumarProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\sumarProductos.aspx.designer.cs">
+      <DependentUpon>sumarProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\sumarProductosProductor.aspx.cs">
+      <DependentUpon>sumarProductosProductor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\sumarProductosProductor.aspx.designer.cs">
+      <DependentUpon>sumarProductosProductor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\upGraderAdmin.aspx.cs">
+      <DependentUpon>upGraderAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\upGraderAdmin.aspx.designer.cs">
+      <DependentUpon>upGraderAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\verProductores.aspx.cs">
+      <DependentUpon>verProductores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\verProductores.aspx.designer.cs">
+      <DependentUpon>verProductores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\verProductoresAdmin.aspx.cs">
+      <DependentUpon>verProductoresAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\verProductoresAdmin.aspx.designer.cs">
+      <DependentUpon>verProductoresAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\verProductos.aspx.cs">
+      <DependentUpon>verProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\verProductos.aspx.designer.cs">
+      <DependentUpon>verProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\verProductosProdAdmin.aspx.cs">
+      <DependentUpon>verProductosProdAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\verProductosProdAdmin.aspx.designer.cs">
+      <DependentUpon>verProductosProdAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\verProductosProductor.aspx.cs">
+      <DependentUpon>verProductosProductor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\verProductosProductor.aspx.designer.cs">
+      <DependentUpon>verProductosProductor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\verUsuarioAdmin.aspx.cs">
+      <DependentUpon>verUsuarioAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\verUsuarioAdmin.aspx.designer.cs">
+      <DependentUpon>verUsuarioAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\verVentas.aspx.cs">
+      <DependentUpon>verVentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\verVentas.aspx.designer.cs">
+      <DependentUpon>verVentas.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1816</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1816/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
